@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethan's Digital Portfolio</title>
+    <style>
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: none;
+        }
+    
+        #back-to-top:hover {
+            background-color: #0056b3;
+        } 
+    </style>
+</head>
+<body>
+    
+    <div id="navbar-container">
+    </div>
+
+    <br><h1><b>Microsoft Office Specialist</h1></b><br>
+
+    <div style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 40px;">
+        <img src="/PHOTOS/Word.png" alt="Word Image" 
+            style="width: 400px; height: auto; border: 2px solid #009999; border-radius: 1px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin-left: 30px;">
+        
+        <figcaption>
+            <h2>
+                I also did a MOS (Microsoft Office Specialist) exam. <br>
+                This was where I learned about Office365 applications that are commonly used. <br><br>
+                I completed an exam on Word, where I learned about the features included on this application and how to troubleshoot problems that can arise using Word. <br><br>
+                This is beneficial to know how to use this if I needed to write. For example, a documentation. <br><br>
+                I use Word in my everyday life and use it for my coursework. 
+            </h2>
+        </figcaption>
+    </div>
+    
+        <img src="/PHOTOS/Word MOS.png" alt="Word MOS Image"
+        style="width: auto; height: auto; border: 2px solid #009999; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin: 0 0 60px 40px;">
+    
+    <div style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 40px;">
+        <img src="/PHOTOS/PowerPoint.png" alt="PowerPoint Image" 
+            style="width: 400px; height: auto; border: 2px solid #009999; border-radius: 1px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin-left: 30px;">
+           
+        <figcaption>
+            <h2>
+                I also passed another exam for MOS. However, this was for PowerPoint. <br><br>
+                I learned the various features included within the application. <br><br>
+                I also use PowerPoint for some of my coursework that is required of me. 
+            </h2>
+        </figcaption>
+    </div>
+
+    <img src="/PHOTOS/PowerPoint MOS.png" alt="PowerPoint MOS Image"
+        style="width: auto; height: auto; border: 2px solid #009999; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin: 0 0 60px 40px;">
+    
+
+    <button id="back-to-top" onclick="scrollToTop()">↑ Top</button>  
+    
+<script>
+    fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("navbar-container").innerHTML = data;
+        })
+        .catch(error => console.error("Error loading navbar:", error));
+
+     window.onscroll = function () {
+        let button = document.getElementById("back-to-top");
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+    };
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    </script> 
+</body>
+</html>
+

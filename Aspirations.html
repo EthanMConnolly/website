@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethan's Digital Portfolio</title>
+    <style>
+        
+        #back-to-top {
+            position: fixed;
+            bottom: 20%;
+            right: 20%;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10% 15%;
+            font-size: 16%;
+            cursor: pointer;
+            border-radius: 5%;
+            display: none; 
+        }
+    
+        #back-to-top:hover {
+            background-color: #0056b3;
+        }
+      
+        .MyPhotos > div {
+            border: #000000 1% solid;
+            border-radius: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <h1><b>Aspirations!</b></h1>
+
+    <div>
+<img src="PHOTOS/Aspirations.png" alt="image Placeholder"
+style="width: 400px; height: auto; border: 2% solid #009999; border-radius: 10%; box-shadow: 0 4% 8% rgba(0,0,0,0.2); margin-left: 40%;">
+</div>
+
+<figcaption>
+    <h2 class="Textaspirations">
+    I have some goals in life that I would like to achieve. <br> <br>
+    I want to have a stable job where I am working hard and get along with my employees around me. <br> <br> 
+    I want to try my best to do the roles that are given to me and hopefully get more responsibilities to handle other aspects of the job in the future. In five years, I would like these goals to be achieved successfully and for me to be comfortable in my workplace environment. 
+    I hope to follow the rules and execute my roles to the best of my ability. I am also hoping to be in a role that helps customers as well and allow me to be practical at times. 
+    </h2>
+</figcaption>
+
+</body>
+
+<button id="back-to-top" onclick="scrollToTop()">↑ Top</button>
+
+<script>
+fetch("navbar.html")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("navbar-container").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading navbar:", error));
+
+
+
+window.onscroll = function () {
+    let button = document.getElementById("back-to-top");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        button.style.display = "block";
+    } else {
+        button.style.display = "none";
+    }
+};
+
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+</script> 
+</html>

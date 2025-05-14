@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethan's Digital Portfolio</title>
+    <style>
+       
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: none; 
+        }
+    
+        #back-to-top:hover {
+            background-color: #0056b3;
+        }
+      
+        .MyPhotos > div {
+            border: #000000 1px solid;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <h1><b>Skills and Qualities!</b></h1>
+    
+    <div style="display: flex; justify-content: center; align-items: flex-start;">
+
+        
+        <div style="margin-right: 80px;">
+            <h1>SKILLS</h1>
+            <ul style="font-size: 30px;list-style-type: disc; padding-left: 20px;">
+                <li><b> Communication</b> - The ability to engage in conversation. </li> <br> <br>
+                <li><b>Teamwork</b> - The ability to work with mutiple people on the same project</li> <br> <br> 
+                <li><b>Reading</b> - The ability to read.</li> <br> <br>
+                <li><b>Writing</b> - The ability to write.</li> <br> <br> 
+                <li><b>Numeracy</b> - The ability to put basic Math problems into the real world.</li> <br> <br> 
+                <li><b>Adaptability</b> - The ability to change depending on the circumstance.</li> <br> <br> 
+                <li><b>Time management</b> - The ability to be punctual.</li> <br> <br> 
+            </ul>
+    </div>
+    
+        
+    <div style="margin: 0 40px;">
+            <img src="/PHOTOS/Writing.jpg" alt="Centered Image"
+                style="width: 600px; height: auto; border: 2px solid #009999; border-radius: 10px;
+                       box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    </div>
+    
+    <div style="margin-left: 80px;">
+            <h1>QUALITIES</h1>
+            <ul style="font-size: 30px; disc; padding-left: 20px;">
+                <li><b>Kindness</b> - The abilty to be nice to others.</li> <br> <br> 
+                <li><b>Positive Attitude</b> - The abilty to be optimistic</li> <br> <br> 
+                <li><b>Reliability</b> - The ability to be someone people can count on</li> <br> <br> 
+                <li><b>Respectful</b> - The ability to act responsibly and kind.</li> <br> <br>
+            </ul>
+            
+    </div>
+    
+</body>
+
+    <button id="back-to-top" onclick="scrollToTop()">↑ Top</button>
+
+    <script>
+    fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("navbar-container").innerHTML = data;
+        })
+        .catch(error => console.error("Error loading navbar:", error));
+
+    
+    
+    window.onscroll = function () {
+        let button = document.getElementById("back-to-top");
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+    };
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    </script> 
+
+</html>
+

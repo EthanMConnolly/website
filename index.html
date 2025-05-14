@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethan's Digital Portfolio</title>  
+    
+    <style>
+        
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: none;
+        }
+
+        #back-to-top:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="navbar-container">
+    </div>
+    
+    <h1 style="text-align: left; margin-left: 30px;"><b>Welcome to Ethan's portfolio!</b></h1>
+
+    <div style="display: flex; align-items: flex-start; gap: 20px;">
+        <img src="/PHOTOS/Me (2).jpg" alt="Image Placeholder" 
+        style="width: 400px; height: auto; border: 2px solid #009999; border-radius: 1px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin-left: 30px;">
+        
+        <figcaption>
+            <h2>
+            Hello there! My name is Ethan Connolly and welcome to my portfolio. I am interested in IT, specifically the hardware side of computers but I also like updating computers and getting them organised with a variety of apps and updates to install.<br> <br>
+            I also like helping people in any way possible. For example, fixing computers for them and helping with every day tasks. I am also very hard-working, trying my best to do the tasks that are required of me. <br> <br>
+            </h2>
+        </figcaption>
+        
+        <img src="/PHOTOS/Hardware technician.jpg" alt="Image Placeholder"
+        style="width: 350px; height: auto; border: 2px solid #009999; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin-left: 40px;">
+    </div>
+    
+    
+    <img src="/PHOTOS/IT technician.jpeg" alt="Image Placeholder" 
+    style="width: 1100px; height: auto; border: 2px solid #009999; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin-left: 30px; margin-top: 20px;">
+    
+   <button id="back-to-top" onclick="scrollToTop()">↑ Top</button>
+
+    <script>
+    fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("navbar-container").innerHTML = data;
+        })
+        .catch(error => console.error("Error loading navbar:", error));
+
+    
+
+    window.onscroll = function () {
+        let button = document.getElementById("back-to-top");
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+    };
+
+    
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    </script> 
+</body>
+</html>

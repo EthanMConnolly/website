@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethan's Digital Portfolio</title>
+   
+    </head>
+    <body>
+    <div id="navbar-container">
+    </div>
+
+
+    <h1><b>Contact Me</b></h1>
+    <br>
+    <div style="display: flex; align-items: flex-start; gap: 20px;">
+        <img src="/PHOTOS/Me (3).jpg" alt="Image Placeholder" 
+        style="width: 350px; height: auto; border: 2px solid #009999; border-radius: 1px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin-left: 30px;">
+                
+        <figcaption>
+            <h3>
+             Contact information: <br> <br>
+             Email: ethanconnolly@btinternet.com <br> <br>
+             Full name: Ethan Martin Connolly <br> <br>
+             Phone no. : 07432 317803 <br> <br>
+            </h3>
+        </figcaption>
+
+    </div>
+        <div style="display: flex; justify-content: center; align-items: center; min-height: 1vh;">
+            <div style="text-align: center;">
+            <select style="width: 400px; margin-bottom: 20px;">
+                <option disabled selected>Select a reason for contacting us</option>
+                <option value="references">References</option>
+                <option value="cv">Asking for a CV</option>
+                <option value="interview">Interview Opportunities</option>
+                <option value="other">Any other queries</option>
+            </select>
+            <br>
+    
+            <div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 20px;">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+            </div>
+    
+            <input type="email" placeholder="Email Address" style="width: 490px;"><br><br>
+            
+            <textarea rows="10" cols="90" placeholder="Message Us (12000 words max)"></textarea><br><br>
+            
+            <div>
+                <a href="Index.html" class="btn" style="background-color: white; color: black; padding: 10px 20px; border: 1px solid black; text-decoration: none; display: inline-block;">Submit</a>
+            </div>
+            <br><br><br>
+         </div>
+    </div>
+  
+<script>
+fetch("navbar.html")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("navbar-container").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading navbar:", error));
+</script> 
+</body>
+</html>

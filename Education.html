@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethan's Digital Portfolio</title>
+    <style>
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: none; 
+        }
+    
+        #back-to-top:hover {
+            background-color: #0056b3;
+        } 
+    </style>
+</head>
+<body>
+    <div id="navbar-container">
+    </div>
+<div>
+    <br>
+
+    <h1><b>Education</b></h1>
+    <div style="display: flex; gap: 20px; align-items: flex-start;">
+
+        
+        <div style="overflow-x: auto;">
+            <div style="display: flex; gap: 20px; align-items: flex-start; min-width: 1000px;">
+                
+                <div style="display: flex; flex-direction: column; gap: 40px;">
+                    <div style="display: flex; gap: 20px; align-items: flex-start;">
+                        <figcaption style="flex: 1;">
+                            <h2>
+                                I studied at the College of West Anglia, situated in Wisbech. <br>
+                                There, I completed a C&G certificate Level 1 for IT. <br>
+                                I learned how to dismantle a PC and how to put components in. <br>
+                                For example, RAM. I also learned how to install software and Windows onto a computer <br>
+                                and how to take care of and to maintain computer systems. <br> 
+                                Moreover, I also have learned about using programs like Photoshop and Webador <br>
+                                and I also was taught about dealing with customers.
+                            </h2>
+                        </figcaption>
+                        <img src="/PHOTOS/Level 1 certificate.png" alt="Level 1 Certificate"
+                             style="width: 300px; height: auto; border: 2px solid #009999; border-radius: 10px;
+                                    box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                    </div>
+        
+                    <div style="display: flex; gap: 20px; align-items: flex-start;">
+                        <figcaption style="flex: 1;">
+                            <h2>
+                                I attended the same College a year prior to the IT course and achieved my C&G certificate. <br> 
+                                I achieved a Level 2 certificate for Personal and social skills. I learned how to communicate with others and have more confidence, while learning valuable life skills <br> <br>
+                                I also participated in team activities and interacted with the class. This course was only a year but it gave me more confidence. <br> <br>
+                            </h2>
+                        </figcaption>
+                        <img src="/PHOTOS/Fresh start level 2.png" alt="Level 2 Certificate"
+                        style="width: 300px; height: auto; border: 2px solid #009999; border-radius: 10px;
+                                    box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                    </div>
+        
+                    <div>
+                        <img src="/PHOTOS/Progress review (2).png" alt="Image Placeholder" 
+                        style="width: 1000px; height: auto; border: 2px solid #009999; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin-left: 30px; margin-top: 20px;">
+                        <br>
+                        <img src="/PHOTOS/Progress review 2 (1).png" alt="Image Placeholder" 
+                        style="width: 1000px; height: auto; border: 2px solid #009999; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin-left: 30px; margin-top: 20px;">
+                    </div>
+                </div>
+        
+                <div style="display: flex; flex-direction: column; gap: 25px;">
+                    <img src="/PHOTOS/Pineapple - C.W.A.jpg" alt="Gallery 1" style="width: 350px; height: auto; border: 1px solid #ccc; border-radius: 55px;">
+                    <figcaption><b>A logo for a College project I designed on Photoshop.</b></figcaption>
+                    <img src="/PHOTOS/AD8 presentation.png" alt="Gallery 2" style="width: 350px; height: auto; border: 1px solid #ccc; border-radius: 55px;">
+                    <figcaption><b>A Powerpoint presentation for a College assignment.</b></figcaption>
+                    <img src="/PHOTOS/Uses and features presentation photo.png" alt="Gallery 3" style="width: 350px; height: auto; border: 1px solid #ccc; border-radius: 55px;">
+                    <figcaption><b>A presentation explaining the uses and features of a website for an assignment at College.</b></figcaption>
+                    <img src="/PHOTOS/HTML Code.png" alt="Gallery 4" style="width: 350px; height: auto; border: 1px solid #ccc; border-radius: 55px;">
+                    <figcaption><b>HTML code that I did for another website.</b></figcaption>
+                </div>
+        </div>
+        <button id="back-to-top" onclick="scrollToTop()"></button>
+
+<script>
+    fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("navbar-container").innerHTML = data;
+        })
+        .catch(error => console.error("Error loading navbar:", error));
+</script>
+
+</body>
+</html>
+

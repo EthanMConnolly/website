@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethan's Digital Portfolio</title>  
+    
+    <style>
+        
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: none; 
+        }
+
+        #back-to-top:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="navbar-container">
+    </div>
+
+    <h1><B>Work Experience</B></h1>
+           
+    <div class="Workimg"> 
+        <img src="PHOTOS/Carpetright.png" alt="Work1" class="center">
+        <P>For work experience, I worked at the shop, ‘Carpetright.’ This was in Wisbech. During my time there, I welcomed customers as they came through the door and cleaned the shop by hoovering up. <br> <br>
+             I worked with two other staff members who I got on well with and they taught me about the type of roles that are required when working there. <br> <br>
+             I also stacked shelves and sometimes helped carry heavy objects into someone’s vehicle.</P>
+             
+    </div>
+    
+    <div class="Workimg">
+         <img src="PHOTOS/EACH.png" alt="Work2" class="center"> 
+     <p> I previously volunteered over the summer at a charity shop in Whittlesey. This was for a children’s Hospice, and it was called, ‘EACH.’ <br> <br>
+      While volunteering, I stacked shelves and worked at the back of the store, putting price tags on items such as: Books, Clothes and DVDs. <br> <br>
+      I also wrote prices on the tags. I also worked with a few staff members who made me feel welcomed and helped me when I found some aspects of my job challenging. <br> <br> </p>
+    
+    </div>
+    
+    <div class="Workimg">
+    <img src="PHOTOS/5-star.png" alt="Work3" class="center">
+    <p>I once did an apprenticeship at a workplace known as 5-Star Cases. While working there, I learned how to deal with customers over the phone and information about their company. <br> <br>
+       I also processed orders and wrote professional emails to customers. Unfortunately, my contract with 5-star Cases ended because some aspects of the role I struggled with. <br> <br>
+        For example, I couldn't get use to the system they used. <br> <br>
+       However, I tried my best to understand some of the aspects of my role and I did come out with more confidence and got some valuable work experience out of this job. <br> <br> </p>
+    </div>
+
+
+    <div class="Workimg">
+        <img src="PHOTOS/APH.png" alt="Work4" class="center">
+        <p>I did work experience at APH (Agricultural Plant Hire) This place was located just on the outskirts of Coates. <br> <br>
+        This was where my dad worked, and I was able to do work experience at this company. I had a book that provided information about combines and I was able to insert the data into their systems. <br> <br>
+        They used software called, ‘SAP.’ I learnt how to navigate their systems and how to insert data. <br> <br>
+         It also helped me develop the skill of observation, looking for what I was supposed to input. <br> <br> </p>
+     
+     <!-- Back to Top Button -->
+    <button id="back-to-top" onclick="scrollToTop()">↑ Top</button>
+
+      
+    <script>
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-container").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading navbar:", error));
+
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-container").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading footer:", error));
+   
+            window.onscroll = function () {
+    let button = document.getElementById("back-to-top");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        button.style.display = "block"; 
+    } else {
+        button.style.display = "none";  
+    }
+};
+
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+</script>
+</body>
+</html>
